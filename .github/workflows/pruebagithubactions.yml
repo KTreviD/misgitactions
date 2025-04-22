@@ -1,6 +1,6 @@
 name: GitHub Actions Practica
 
-on: 
+on:
   push:
     branches:
       - main
@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Configuración inicial
-        run: echo "El flujo de trabajo ha sido ejecutado en el evento: ${{ github.event_name }}"
-        
+        run: echo "El flujo de trabajo ha sido ejecutado en el evento ${{ github.event_name }}"
+
       - name: Información del runner
         run: echo "El trabajo se está ejecutando en un servidor ${{ runner.os }} hospedado en GitHub"
-        
+
       - name: Nombre de la rama y repositorio
-        run: echo "El nombre de la rama es: ${{ github.ref }} y tu repositorio es: ${{ github.repository }}."
-        
+        run: echo "El nombre de la rama es ${{ github.ref }} y tu repositorio es ${{ github.repository }}."
+
       - name: Verificación del código
         run: echo "Se está verificando el código del repositorio"
-        
+
       - name: Preparación del runner
         run: echo "El repositorio ${{ github.repository }} ha sido colocado al runner."
-        
+
       - name: Estado del trabajo
-        run: echo "El estado del trabajo es: ${{ job.status }}."
+        run: echo "El estado del trabajo es ${{ job.status }}."
