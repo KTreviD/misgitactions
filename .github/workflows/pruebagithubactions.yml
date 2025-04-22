@@ -11,3 +11,4 @@ jobs:
       - run: echo "El repositorio ${{ github.repository }} ha sido colocado al runner."
       - run: echo "El flujo de trabajo está listo para verificar el código en el runner."
       - run: echo "El estado del trabajo es: ${{ job.status }}."
+
